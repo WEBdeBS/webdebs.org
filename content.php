@@ -14,7 +14,24 @@
 			<span class="tag">Incontro</span>
 		<?php endif; ?>
 		<p>
-			<span><?php echo get_the_date(); ?></span>
+			<?php
+				if (in_category('eventi') || in_category('incontri')):
+					$when = get_post_meta($post->ID, 'Quando', true);
+					if ($when):
+			?>
+				<span>
+					<?php echo $when; ?>
+				</span>
+			<?php
+					endif;
+				else:
+			?>
+				<span>
+					<?php echo get_the_date(); ?>
+				</span>
+			<?php
+				endif;
+			?>
 			<?php if( get_the_author_meta('ID') > 1 ) : ?>
 				<span><?php _e( 'by', 'yoko' ); ?> <?php the_author() ?></span>
 			<?php endif; ?>
