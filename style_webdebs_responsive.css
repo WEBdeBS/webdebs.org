@@ -1,0 +1,111 @@
+/* Media queries for responsive design
+--------------------------------------------- */
+
+/* --- ipad (landscape) --- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+	#page { min-width: 0px;	}
+	#tertiary .searchform .search-input { width: 58%; }
+
+}
+
+/* --- ipad (portrait) --- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+
+	#page { min-width: none;	}
+	#tertiary .searchform { text-align: center; }
+	#tertiary .searchform .search-input { margin: 0px 0px 10px 0px; width: 93%; }
+
+	#colophon span.contact { padding-left: 0px; background: none; }
+	#colophon span.follow { padding-left: 0px; background: none; left: 42px; }
+	#colophon img.credits { left: 275px; }
+
+}
+
+/* --- tablet-pc + iphone/smartphones --- */
+/*@media screen and (min-width: 481px) and (max-width: 768px) {*/
+@media screen and (max-width: 768px) {
+
+	#branding { padding-right: 20px; padding-left: 20px; text-align: center; }
+
+	#branding #site-logo { float: none; margin: 0px auto; max-width: none; }
+	/*serve ancora?*/
+	#branding #site-logo img { width: auto; height: auto; /*max-width: none;*/ }
+
+	#branding #mainnav { float: none; max-width: 100%; margin: 0px auto; padding: 0px; text-align: center; }
+	#branding #mainnav ul { position: relative; bottom: auto; right: auto; margin: 0px auto; display: inline-block; float: none; max-width: none; }
+	#branding #mainnav ul li a { margin-left: 5px; padding: 6px 10px; font-size: 24px; line-height: 24px; font-family: 'League Gothic', 'Droid Sans', arial, sans-serif; font-weight: normal; }
+
+	#content .entry-details { position: relative; width: auto; padding-right: 0px; float: none; }
+	#content .entry-details p > span { display: inline-block; }
+	#content .entry-details p > span a { border-left: 1px solid #E4E4E4; padding-left: 5px; margin-left: 5px; display: inline-block; }
+	#content .entry-header { margin-left: 0px; }
+	#content .entry-content { float: none; width: auto; }
+
+	}
+	
+	/* --- iphone & smartphones --- */
+	@media only screen and (max-width: 480px) {
+	
+		#page { min-width: 0px;	}
+		#wrap { padding: 35px 15px 15px; }
+		#main { width: 100%; }
+
+		#branding { padding-top: 10px; padding-right: 10px; padding-left: 10px; }
+
+		#content { width: 100%; }
+		#content .single-entry-header h1.entry-title,
+		#content .page-entry-header h1.entry-title,
+		#content .page-header h1.page-title,
+		#content .entry-header h2.entry-title { font-size: 32px; line-height: 35px; }
+		#content .page-header h2.archive-meta { font-size: 14px; }
+		#content .post { margin-bottom: 20px; padding-bottom: 10px; }
+	
+		#content .single-entry-content img.size-full { max-width: 40%; }
+		#content .no-results img { margin: 20px 0px 0px 0px; }
+
+		#secondary { display: none; }
+		#tertiary { display: none; }
+	
+		#colophon { height: 50px; margin-right: 15px; margin-left: 15px; }
+		#colophon span.contact { display: none; }
+		#colophon span.follow { display: none; }
+		#colophon span.webdebs { display: none; }
+		#colophon img.credits { display: none; }
+		#colophon img.gohome { position: absolute; top: 0px; left: 0px; display: block; }
+		#colophon img.gotop { position: absolute; top: 0px; right: 0px; display: block; }
+	
+		body.home #secondary { display: block; margin-top: 0px; margin-left: 0px; padding-top: 30px; width: 100%; border-top: 5px double #E4E4E4; }
+		body.home #tertiary { display: block; margin-left: 0px; width: 100%; }
+		body.home #secondary aside ,
+		body.home #tertiary aside { margin-bottom: 15px; padding-bottom: 15px; }
+		body.home #tertiary aside:last-child { margin-bottom: 0px; border-bottom: none; }
+		body.home #colophon { height: 115px; }
+		body.home #colophon span.contact { display: block; }
+		body.home #colophon span.follow { display: block; right: 0px; left: auto; }
+		body.home #colophon span.webdebs { display: block; top: 50px; left: 50%; right: 5px; margin-left: -130px; opacity:0.20; filter:alpha(opacity=20); }
+		body.home #colophon img.credits { display: block; left: 135px; }
+		body.home #colophon img.gohome { display: none; }
+		body.home #colophon img.gotop { display: none; }
+
+		.page-id-2 #content article { width: auto; margin: 0px auto !important; padding: 0px 0px 275px !important; background-position: 50% bottom; }
+	
+	}
+	
+	@media only screen and (max-width: 320px) {
+	
+		#branding #mainnav ul li a { padding: 4px 6px; font-size: 16px; line-height: 16px; }
+		body.home #colophon span.contact,
+		body.home #colophon span.follow { padding-left: 0px; background: none; }
+		body.home #colophon img.credits { left: 50px; }
+		.page-id-2 #content article { padding-bottom: 200px !important; -webkit-background-size: 100% auto; -moz-background-size: 100% auto; }
+
+	}
+	
+	/* --- retina & high pixel-ratio devices --- */
+	/*
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3/2),
+	only screen and (min-device-pixel-ratio: 1.5) {}
+	*/

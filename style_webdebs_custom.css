@@ -1,0 +1,354 @@
+/* Yoko overrides/customization
+--------------------------------------------- */
+
+/*............................... LINKS ..........*/
+
+/* avoid dotted borders on active links */
+a:active, a:focus{ outline: none; }
+
+/* avoid borders on images contained in links */
+a img, :link img, :visited img { border: none; }
+
+
+/* img interpolation with IE7 */
+img { -ms-interpolation-mode: bicubic; }
+
+/* ------ OVERRIDES ------- */
+
+body {
+	background: #333333 url(images/body_background.png) repeat 0px 0px;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0,0,0,0.05)), to(rgba(0,0,0,0))), url(images/body_background.png);
+	background-image: -moz-linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0)), url(images/body_background.png);
+	background-repeat: repeat-x, repeat;
+	background-position: left top, left top;
+	-webkit-background-size: 100px 460px, 100px 300px;
+	-moz-background-size: 100px 460px, 100px 300px;
+	
+}
+
+#page {
+	position: relative;
+	/*min-width: 880px;*/	/* todo */
+	max-width: 1162px;
+	margin-top: 0px;
+	padding: 0px;
+	-webkit-box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+	box-shadow: 0px 3px 4px (0,0,0,0.2);
+	}
+
+#branding {
+	position: relative;
+	width: auto;
+	height: auto;
+	padding: 20px 25px 50px 25px;
+	background: url(images/header_background.png) repeat-x 50% bottom;
+	-webkit-box-shadow: inset 0px 1px 9px rgba(255,255,255,0.6);
+	-moz-box-shadow: inset 0px 1px 9px rgba(255,255,255,0.6);
+	box-shadow: inset 0px 1px 9px (255,255,255,0.6);
+	}
+	
+	#branding #site-logo { 
+		float: left;
+		width: auto; 
+		max-width: 45%;
+		}
+		#branding #site-logo img { max-width: 100%; } 
+
+	#branding #mainnav {
+		position: relative;
+		width: auto;
+		height: 100%;
+		max-width: none;
+		margin: auto;
+		margin-left: 45%;
+		float: none;
+		}
+		
+		#branding #mainnav ul { 
+			position: absolute;
+			bottom: 15px;
+			right: 0px;
+		}
+
+		#branding #mainnav ul li:first-child,
+		#branding #mainnav ul li { margin-top: 5px; }
+
+		#branding #mainnav ul li a {
+			margin: 0px 0px 0px 10px;
+			padding: 9px 14px;
+			font-family: 'League Gothic', 'Droid Sans', arial, sans-serif;
+			font-size: 24px;
+			line-height: 24px;
+			font-weight: normal;
+			letter-spacing: 0px;
+			-webkit-font-smoothing: antialiased;
+			color: #FFFFFF;
+			background-color: #4CA7CB;
+			background-color: rgba(24,89,123,0.2);
+			-webkit-border-radius: 4px; -webkit-background-clip: padding-box;
+			-moz-border-radius: 4px; -moz-background-clip: padding-box;
+			border-radius: 4px; background-clip: padding-box;
+			-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.3), inset 0px 1px 2px rgba(0,0,0,0.3);
+			-moz-box-shadow: 0px 1px 0px rgba(255,255,255,0.3), inset 0px 1px 2px rgba(0,0,0,0.3);
+			box-shadow: 0px 1px 0px rgba(255,255,255,0.3), inset 0px 1px 2px rgba(0,0,0,0.3);
+			}
+	
+			#branding #mainnav ul li a:hover {
+				color: #FFFFFF !important;
+				background-color: #18597B;
+				background-color: rgba(24,89,123,0.6);
+			}
+
+			#branding #mainnav ul li.current-menu-item a {
+				background: #CC0000 url(images/menu_item_background.png) repeat 50% 50%;
+				/*background-color: #18597B;*/
+				-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,0.3), inset 0px 1px 4px rgba(0,0,0,0.4);
+				-moz-box-shadow: 0px 1px 0px rgba(255,255,255,0.3), inset 0px 1px 4px rgba(0,0,0,0.4);
+				box-shadow: 0px 1px 0px rgba(255,255,255,0.3), inset 0px 1px 4px rgba(0,0,0,0.4);
+			}
+
+#wrap { margin-top: 0px; padding: 35px 45px 35px; border-top: none; }
+#main { width: 72.5%; }
+#content { width: 70%; }
+
+#content .page { border-bottom: none; margin-bottom: 0px; }
+#content .post { position: relative; padding-bottom: 20px; }
+#content .entry-header { margin-left: 25.5%; z-index: 2; }
+#content .entry-details { position: absolute; top: 0px; left: 0px; width: 22%; padding-right: 3%; }
+#content .entry-details p > span { display: block; }
+#content .single-entry-header h1.entry-title,
+#content .page-entry-header h1.entry-title,
+#content .page-header h1.page-title,
+#content .entry-header h2.entry-title { font-family: 'League Gothic', 'Droid Sans', arial, sans-serif; font-size: 42px; line-height: 45px; font-weight: normal; }
+
+body.home #content article.category-eventi .entry-header h2.entry-title a { /*color: #CC0000;*/ /*border-bottom: 1px solid #CC0000;*/ /*background-color: #4CA7CC; color: #FFFFFF;*/ }
+
+#content .page-header h1.page-title span.dets { text-transform: lowercase; font-size: 0.8em; color: #AAAAAA; }
+#content strong { color: font-weight: bold; color: #666666; }
+#content article:last-child { border-bottom: none; padding-bottom: 0px; }
+
+#secondary { width: 22.944%; margin-left: 7.054%; }
+#tertiary .searchform .search-input { width: 60%; }
+
+#colophon { position: relative; width: auto; height: 75px; display: block; float: none; margin: 20px  45px 0px; padding: 0px; }
+#colophon span.contact { position: absolute; top: 0px; left: 0px; margin: 0px; padding: 0px 0px 0px 68px; background: url(images/footer_contact_text.png) no-repeat 0px 0px; }
+#colophon span.follow { position: absolute; top: 0px; left: 125px; margin: 0px; padding: 0px 0px 0px 63px; background: url(images/footer_follow_text.png) no-repeat 0px 0px; }
+#colophon span.webdebs { position: absolute; top: 0px; right: 0px; margin: 0px; padding: 0px 0px 0px 155px; background: url(images/footer_webdebs_text.png) no-repeat 0px 0px; }
+#colophon span img { display: block; float: left; /* avoid extra whitespace */ }
+#colophon img.credits { position: absolute; top: 0px; left: 50%; }
+#colophon img.gohome, #colophon img.gotop { display: none; }
+
+/* ------ CUSTOM ------- */
+
+#tertiary { padding-top: 100px; background: url(images/aside_buttons.png) no-repeat 50% top; }
+#tertiary aside ul.upcoming li { margin-bottom: 5px; }
+#tertiary aside ul.upcoming li strong { font-weight: bold; }
+#tertiary aside ul.upcoming li.meet {}
+#tertiary aside ul.upcoming li.conf {}
+
+#tertiary aside div.gcal { margin-top: 20px; padding-top: 20px; border-top: 1px dotted #E4E4E4; text-align: left; }
+#tertiary aside div.gcal a { padding-left: 24px; display: block; font-size: 14px; line-height: 18px; color: #CF3636; background: url(images/icons/calendar.png) no-repeat 0px 0px; }
+
+.entry-details span.tag { display: inline-block; margin: 0px 0px 5px 0px; padding: 0px 4px; font-family: 'Droid Sans', arial, sans-serif; font-weight: bold; font-style: normal; text-transform: uppercase; color: #FFFFFF; }
+.category-incontri .entry-details span.tag { background-color: #B7E4F5; /*background-color: #7DCFED;*/ }
+.category-eventi .entry-details span.tag { background-color: #7DCFED; background-color: #CC0000; }
+
+#content .page-header { margin-bottom: 40px; }
+#content .page-header h1.page-title { margin: 0px; padding: 0px; font-size: 48; line-height: 52px; color: #222222; letter-spacing: 0px; }
+#content .page-header h2.archive-meta { margin: 0px 0px 0px 0px; font-family: 'Droid Serif',  Times, serif; font-size: 16px; font-style: italic; font-weight: normal; color: #999999; }
+
+#content figure img.wp-post-image { width: 100%; height: auto; margin-bottom: 40px; }
+
+#content .single-entry-custom { margin-top: 20px; margin-bottom: 10px; }
+#content .single-entry-custom p { padding: 2px 0px 2px 24px; font-size: 0.9em; background-position: 0px 3px; background-repeat: no-repeat; }
+#content .single-entry-custom p.dove { background-image: url(images/icons/location.png); }
+#content .single-entry-custom p.quando { background-image: url(images/icons/calendar.png); }
+#content .single-entry-custom p.sito { background-image: url(images/icons/link.png); }
+#content .single-entry-custom p.relatori { background-image: url(images/icons/user.png); }
+#content .single-entry-custom p.slides { background-image: url(images/icons/presentation.png); }
+#content .single-entry-custom p.dove a, #content .single-entry-custom p.dove a:hover { display: inline-block; margin-left: 10px; background: #DBF1FA; color: #7991B3 !important; padding: 0px 6px; text-transform: uppercase; font-size: 0.8em; border-radius: 3px; }
+
+.search-no-results #content .page-header,
+.error404 #content .page-header { margin-bottom: 0px; }
+#content .no-results p { margin: 10px 0px; padding: 0px; line-height: 1em; }
+#content .no-results .searchform { margin-top: 5px; }
+#content .no-results img { margin: 75px 140px 0px; max-width: 100%; }
+
+.more-link { white-space: nowrap; }
+
+aside#addthis { padding-bottom: 20px; }
+aside#addthis div.addthis_toolbox { display: block; }
+aside#addthis div.addthis_toolbox a.addthis_button_facebook_like iframe { width: 100% !important; }
+aside#addthis div.addthis_toolbox a.addthis_button_tweet iframe { width: 100% !important; }
+aside#addthis div.addthis_toolbox.ggpl { width: 100% !important; margin-top: 5px; }
+
+.page-id-2 #content { text-align: center; }
+.page-id-2 #content article { width: 750px; min-height: 225px; margin: 0px auto !important; padding: 20px 0px 40px !important; text-align: left; background: url(images/credits_cucito.jpg) no-repeat right 0px; }
+
+
+/* ------ CONFERENCES ------- */
+
+#content article.conference_backup {}
+
+#content article.conference_backup h3 {
+	color: #009BC2;
+}
+
+#content article.conference_backup section.programma > ul {
+	/* layout
+	------------------ */
+	position: relative;
+	margin: 0px 0px 0px 20px;
+	padding: 0px;
+	}
+
+	#content article.conference_backup section.programma > ul li {
+		/* layout
+		------------------ */
+		position: relative;
+		margin: 0px 0px 4px 0px;
+		padding: 10px 20px 10px 20px;
+		list-style-type: none;
+		/* formatting
+		------------------ */
+		background: #F4F4F4;
+		/* css3
+		------------------ */
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		}
+
+		#content article.conference_backup section.programma > ul li.talk { padding-bottom: 15px; background: #E4E4E4; }
+
+		#content article.conference_backup section.programma > ul li h5 {
+			/* layout
+			------------------ */
+			margin: 0px;
+			padding: 5px 0px 5px 0px;
+			/* formatting
+			------------------ */
+			font-size: 13px;
+			line-height: 15px;
+			font-weight: bold;
+			color: #333333;
+			}
+
+			#content article.conference_backup section.programma > ul li h5 a { color: #333333; text-decoration: none; }
+			#content article.conference_backup section.programma > ul li h5 a:hover { text-decoration: underline; }
+
+		#content article.conference_backup section.programma > ul li h4 {
+			/* layout
+			------------------ */
+			margin: 4px 0px;
+			padding: 0px;
+			font-size: 18px;
+			line-height: 22px;
+			color: #666666;
+		}
+
+		#content article.conference_backup section.programma > ul li .more_dets { 
+			/* layout
+			------------------ */
+			margin: 0px;
+			padding: 0px;
+			/* formatting
+			------------------ */
+			font-size: 14px;
+			line-height: 18px;
+			color: rgba(0,0,0,0.65);
+			}
+		
+
+		#content article.conference_backup section.programma > ul li. div.more_followup {
+			/* layout
+			------------------ */
+			margin: 10px 0px 0px 0px;
+			padding: 0px;
+			}
+	
+			#content article.conference_backup section.programma > ul li div.more_followup a {
+				/* layout
+				------------------ */
+				margin: 0px 15px 0px 0px;
+				padding: 0px 0px 0px 22px;
+				width: auto;
+				height: 18px;
+				display: inline-block;
+				/* formatting
+				------------------ */
+				font-weight: bold;
+				font-size: 13px;
+				line-height: 18px;
+				white-space: nowrap;
+				color: #962F27;
+				color: #7C2D27;
+				background-repeat: no-repeat;
+				background-position: left 50%;
+				}
+				#content article.conference_backup section.programma > ul li div.more_followup a.slide { background-image: url(images/conference/followup_slideshow.png); }
+				#content article.conference_backup section.programma > ul li div.more_followup a.video { background-image: url(images/conference/followup_video.png); }
+
+
+
+#content article.conference_backup section.donatori > ul {
+	/* layout
+	------------------ */
+	position: relative;
+	margin: 0px 0px 0px 20px;
+	padding: 0px;
+	list-style: none;
+	/* formatting
+	------------------ */
+	background: #E4E4E4;
+	/* css3
+	------------------ */
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	}
+
+	#content article.conference_backup section.donatori > ul li {
+		/* layout
+		------------------ */
+		position: relative;
+		margin: 0px 0px 4px 0px;
+		padding: 20px;
+		list-style: none;
+		}
+
+		#content article.conference_backup section.donatori > ul li h4 {
+			/* layout
+			------------------ */
+			margin: 0px 0px 10px 0px;
+			/* formatting
+			------------------ */
+			font-size: 16px;
+			line-height: 32px;
+			text-align: left;
+			text-transform: uppercase;
+			background-image: url(images/conference/sponsor_levels.png);
+			background-repeat: no-repeat;
+			color: #222222;
+			border-bottom: 1px dotted #CCCCCC;
+			}
+
+			#content article.conference_backup section.donatori > ul li.platinum h4 { padding-left: 108px; background-position: 0px 50%; }
+			#content article.conference_backup section.donatori > ul li.gold h4 { padding-left: 82px; background-position: -26px 50%; }
+			#content article.conference_backup section.donatori > ul li.silver h4 { padding-left: 56px; background-position: -52px 50%; }
+			#content article.conference_backup section.donatori > ul li.bronze h4 { padding-left: 30px; background-position: -78px 50%; }
+			#content article.conference_backup section.donatori > ul li.partner h4 { padding-left: 2px; background: none; }
+
+		#content article.conference_backup section.donatori > ul li .block { text-align: center; }
+
+		#content article.conference_backup section.donatori > ul li .block a img {
+			margin: 20px auto;
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			}
+
+			#content article.conference_backup section.donatori > ul li .block a:last-child img { margin-top: 20px; }
+
+

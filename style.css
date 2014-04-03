@@ -1,0 +1,16 @@
+/*
+
+Theme Name: Yoko-WEBdeBS
+Description: WEBdeBS customization of the Yoko theme.
+Template: yoko
+
+Author: Cristiano Rastelli
+Author URI: http://www.didoo.net
+
+*/
+
+/* import parent theme css */
+@import url("style_yoko_mod.css");
+@import url("style_webdebs_fonts.css");
+@import url("style_webdebs_custom.css");
+@import url("style_webdebs_responsive.css");
