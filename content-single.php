@@ -9,7 +9,6 @@
 
 	<header class="single-entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<p><span class="entry-date"><?php echo get_the_date(); ?></span> <span class="entry-author"><?php _e( 'by', 'yoko' ); ?> <?php the_author() ?></span> <?php if ( comments_open() ) : ?> | <?php comments_popup_link( __( '0 comments', 'yoko' ), __( '1 Comment', 'yoko' ), __( '% Comments', 'yoko' ) ); ?><?php endif; ?></p>
 	</header><!-- end single-entry-header -->
 	
 	<?php $custom_sito = get_post_meta($post->ID, 'Sito', true); ?>

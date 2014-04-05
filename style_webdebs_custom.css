@@ -116,7 +116,7 @@ body {
 #content .post { position: relative; padding-bottom: 20px; }
 #content .entry-header { margin-left: 25.5%; z-index: 2; }
 #content .entry-details { position: absolute; top: 0px; left: 0px; width: 22%; padding-right: 3%; }
-#content .entry-details p > span { display: block; }
+#content .entry-details p > span { display: block; margin-top: 10px; }
 #content .single-entry-header h1.entry-title,
 #content .page-entry-header h1.entry-title,
 #content .page-header h1.page-title,

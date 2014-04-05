@@ -17,10 +17,18 @@
 			<?php
 				if (in_category('eventi') || in_category('incontri')):
 					$when = get_post_meta($post->ID, 'Quando', true);
+					$where = get_post_meta($post->ID, 'Dove', true);
 					if ($when):
 			?>
 				<span>
 					<?php echo $when; ?>
+				</span>
+			<?php
+					endif;
+					if ($where):
+			?>
+				<span>
+					<?php echo $where; ?>
 				</span>
 			<?php
 					endif;
@@ -32,14 +40,7 @@
 			<?php
 				endif;
 			?>
-			<?php if( get_the_author_meta('ID') > 1 ) : ?>
-				<span><?php _e( 'by', 'yoko' ); ?> <?php the_author() ?></span>
-			<?php endif; ?>
-			<?php if( get_comments_number() > 0 ) : ?>
-				<span><?php comments_popup_link( __( '0 comments', 'yoko' ), __( '1 Comment', 'yoko' ), __( '% Comments', 'yoko' ) ); ?></span>
-			<?php endif; ?>
 		</p>
-
 	</div><!-- end entry-details -->
     
 	<header class="entry-header">
