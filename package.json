@@ -1,0 +1,13 @@
+{
+  "name": "webdebs.org",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-smushit": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-ftpush": "*"
+  }
+}
